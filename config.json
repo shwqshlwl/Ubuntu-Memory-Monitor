@@ -1,0 +1,16 @@
+{
+    "check_interval_seconds": 3,
+    "warning": {
+        "enabled": true,
+        "threshold_percent": 80.0
+    },
+    "critical": {
+        "enabled": true,
+        "threshold_percent": 90.0,
+        "commands": [
+            "sudo systemctl stop elasticsearch",
+            "killall chrome",
+            "echo '没有更多可关闭的进程了'"
+        ]
+    }
+}
